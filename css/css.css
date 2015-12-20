@@ -1,33 +1,46 @@
 .header{
     background-color:#5D3FA0;
     color:#FFF;
-    padding:5% 0 5% 0;
+    padding:5% 0;
     height:100%;
 }
 .header .title{
-	border-bottom: 1px solid #cdbfe3;
-	font-size:40px;
-	margin-bottom:5%;
+    border-bottom: 1px solid #cdbfe3;
+    font-size:40px;
+    margin-bottom:5%;
 }
 
 .img-circle{
-	width:40%;
-	display:block;
-	cursor:pointer;
-}
-.img-circle:hover{
-	border:5px solid;
+    width:40%;
+    display:block;
+    cursor:pointer;
 }
 .arrow {
-	text-align:center;
-	font-size:40px;
-	opacity:0;
+    text-align:center;
+    font-size:40px;
+    opacity:0;
 }
 .name{
-	text-align:center;
-	font-size:20px;
+    text-align:center;
+    font-size:20px;
 }
 
 .automargin{
-margin:0 auto;
+    margin:0 auto;
+}
+
+.profile{
+    padding-top:5%;
+}
+.panel-heading{
+    font-size:20px;
+}
+.panel-body{
+    font-size:20px;
+}
+.label{
+    margin:0 2% 1% 0;
+    display:inline-block;
+    width:10%;
+    padding:10px 0;
 }

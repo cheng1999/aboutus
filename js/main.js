@@ -1,4 +1,3 @@
-
 $("img").on('click mouseover', function (){
     var index=$(this).attr('id').replace("img-","");
     index=parseInt(index);
