@@ -1,6 +1,6 @@
 .header{
     color:#FFF;
-    padding:5% 0;
+    padding:5% 0 0;
     background-image: linear-gradient(120deg, #155799, #159957);
     color: #fff;
     text-align: center;
@@ -30,7 +30,7 @@
 }
 
 .profile{
-    padding-top:5%;
+    padding-top:20px;
 }
 .panel-heading{
     font-size:20px;
