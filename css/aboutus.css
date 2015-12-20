@@ -20,6 +20,10 @@
     font-size:40px;
     opacity:0;
 }
+.remind{
+    font-size:20px;
+	opacity:0;
+}
 .name{
     text-align:center;
     font-size:20px;
@@ -44,7 +48,7 @@
     min-width:90px;
     padding:10px 0;
 }
-.label-default{
+.label-primary{
     font-size:13px;
 }
 .small{
