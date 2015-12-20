@@ -1,18 +1,13 @@
 
-$("#cheng").on('click mouseover', function (){
-	$("#cheng").css('border','5px solid');
-	$("#goh").css('border','0');
-	$("#chengprofile").show();
-	$("#gohprofile").hide();
-	$("#chengarrow").css('opacity','1');
-	$("#goharrow").css('opacity','0');
+$("img").on('click mouseover', function (){
+    var index=$(this).attr('id').replace("img-","");
+    index=parseInt(index);
+    $("img").css('border','0');
+    $(this).css('border','5px solid');
+    $(".profile").hide();
+	$(".profile").eq(index).show();
+    $(".arrow").css('opacity','0');
+	$(".arrow").eq(index).css('opacity','1');
 });
 
-$("#goh").on('click mouseover', function (){
-	$("#cheng").css('border','0');
-	$("#goh").css('border','5px solid');
-	$("#chengprofile").hide();
-	$("#gohprofile").show();
-	$("#chengarrow").css('opacity','0');
-	$("#goharrow").css('opacity','1');
-});
+
