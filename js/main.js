@@ -12,7 +12,9 @@ $("img").on('click mouseover', function (){
 
 //hmm mr goh help me
 $("img").on('click',function(){
-  $( ".remind").toggle( "pulsate" );
+        $(".remind").fadeTo('fast',1).fadeTo('fast',0.5).
+                    fadeTo('fast',1).fadeTo('fast',0.5).
+                    fadeTo('fast',1).fadeTo('fast',0);
 });
 
 $("#img-0").mouseover();
