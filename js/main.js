@@ -10,7 +10,12 @@ $("img").on('click mouseover', function (){
     $(".arrow").eq(index).css('opacity','1');
 });
 
-$("#img-0").click();
+//hmm mr goh help me
+$("img").on('click',function(){
+  $( ".remind").toggle( "pulsate" );
+});
+
+$("#img-0").mouseover();
 
 
 //copy from http://codepen.io/rdallaire/pen/apoyx
