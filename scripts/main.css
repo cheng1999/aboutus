@@ -1,17 +1,41 @@
-.introduction {
+.cover {
   min-height: 700px;
 }
-.introduction .ui.header {
+.cover .ui.header {
   margin-top: 3em;
   margin-bottom: 0em;
   font-size: 4em;
 }
-.introduction .ui.header .sub.header {
+.cover .ui.header .sub.header {
   font-size: 0.5em;
   margin-bottom: 3em;
+}
+
+#introduction {
+  width:100%;
+}
+#toprofile{display:block;float:right}
+#profile {
+  width:100%;
 }
 
 .ui.text.container h1 {
   margin-top: 3em;
 }
 
+.footertext {
+  min-width: 100%;
+  text-align: center;
+}
+
+.hide {
+  visibility: hidden; 
+}
+
+.toanim {
+  visibility: hidden;
+}
+
+.toanim.animated {
+  visibility: visible;
+}

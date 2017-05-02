@@ -1,58 +1,25 @@
-<!DOCTYPE html>
+<script>
+//this is router
 
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="include/semantic.min.css">
-  <link rel="stylesheet" type="text/css" href="scripts/main.css">
-  <title>关于我们</title>
-</head>
+var hash = window.location.hash,
+    html = document.getElementsByTagName("html")[0],
+    xhttp = new XMLHttpRequest();
 
-<body>
-  <div class="ui inverted segment introduction">
-    <div class="ui middle aligned stackable grid container">
-      <div class="column">
-        <h1 class="ui inverted header centered">有兴趣<br>可是不知道如何开始的领域？
-          <div class="sub inverted header">我们可以在能力范围内给予指导或互相交流。</div>
-        </h1>
-      </div>
-    </div>
-  </div>
- 
-   <div class="ui text container">
-     <h1 class="ui header">多会一些技能绝对是一个好事<br>
-      但难以接触到的领域该如何开始呢？</h1>
-     <p>
-     我们花了许多时间来学习一些我们这里一般环境下似乎难以接触的领域。<br>有走过路的我们帮你打开一条路或者少走一种弯路总是好的，不试试看吗？
-     </p>
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    document.write(xhttp.responseText);
+    document.close();
 
-    <h1 class="ui header">又是钱的问题，收费？</h1>
-    <p>
-    对不起是的，我们想要赚点零用钱当旅费......<br>费用可以商量，你觉得补习费当参考价怎么样？越高越好。<br>我认为做些牺牲来获得知识和技能是值得的(尤其是时间和精神），不过不想还钱还是欢迎交流。
-    </p>
+ }
+};
 
-    <h1 class="ui header">说这么多垃圾，你们到底会什么？</h1>
-    <p>
-    可以看下面的关于我们个人的小介绍<br>其实我们没有特别厉害，可是也想学以至用。
-    无论如何志同道合的欢迎交流。<br>不耻下问谦卑学习，大家也可以互相交流学习。
-    </p>
-    <h1></h1>
-    </div>
-  </div>
+if (hash == "") {
+  xhttp.open("GET", "dir/intro.html", true);
+  xhttp.send();
+}
+else if (hash == "#aboutus") {
+  xhttp.open("GET", "dir/aboutus.html", true);
+  xhttp.send();
+}
 
-
-<div class="ui inverted segment center aligned about">
-  <div class="ui grid two column container">
-    <div class="column">
-      <img class="column ui circular image centered" src="images/rabbit.jpg">
-    </div>
-    <div class="column">
-      <img class="ui circular image centered" src="images/cat.jpg">
-    </div>
-  </div>
-</body>
-
-<script src="include/semantic.min.js"></script>
-<script src="include/vue.js"></script>
-
+</script>
