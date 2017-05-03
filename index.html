@@ -1,24 +1,25 @@
 <script>
 //this is router
 
-var hash = window.location.hash,
-    html = document.getElementsByTagName("html")[0],
+var path = window.location.pathname.split("/");
+path = path[path.length-1];
+
+var html = document.getElementsByTagName("html")[0],
     xhttp = new XMLHttpRequest();
 
 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     document.write(xhttp.responseText);
     document.close();
-
  }
 };
 
-if (hash == "") {
-  xhttp.open("GET", "dir/intro.html", true);
+if (path == "aboutus") {
+  xhttp.open("GET", "dir/aboutus.html", true);
   xhttp.send();
 }
-else if (hash == "#aboutus") {
-  xhttp.open("GET", "dir/aboutus.html", true);
+else{
+  xhttp.open("GET", "dir/intro.html", true);
   xhttp.send();
 }
 
