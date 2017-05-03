@@ -12,15 +12,15 @@
 }
 
 #introduction {
-  width:100%;
+  width: 100%;
 }
 #toprofile{display:block;float:right}
 #profile {
-  width:100%;
+  width: 100%;
 }
 
 .ui.text.container {
-  padding-bottom:50vh;
+  padding-bottom: 50vh;
 }
 
 .ui.text.container h1 {
@@ -42,4 +42,13 @@
 
 .toanim.animated {
   visibility: visible;
+}
+
+.button {
+  margin-top: 10vh;
+}
+
+.divider {
+  padding-top: 20vh;
+  padding-bottom: 10vh;
 }
