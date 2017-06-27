@@ -27,7 +27,23 @@ var profilesdata=[
       {link:true,   msg:["Facebook","https://www.facebook.com/iih.racso"]},
     ],
   },
-
+  
+  {
+    index: 2,
+    name: "吴宇航",
+    img: "cat.jpg",
+    age: 16,
+    areas: ["电脑", "编程"],
+    description: "学渣",
+    deeper: "( ͡° ͜ʖ ͡°)",
+    contacts: [
+      { link: true, msg: ["电话","-"] },
+      { link: false, msg: ["Wechat","jonathangoh333"] },
+      { link: true, msg:["Facebook","https://www.facebook.com/hang333"]},
+      { link: true, msg:["Email","mailto:jonathan.goh333@gmail.com"]},
+      { link: true, msg:["Github","https://github.com/hang333"]},
+     ],
+  },
   { 
     index:0,
     name:"你的名字",
