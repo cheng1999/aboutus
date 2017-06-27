@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="include/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="include/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="scripts/main.css">
+  <title>关于我们</title>
+</head>
+
+<body>
+
+
+<div class="ui segment container cover">
+
+  <div id="namecards" class="ui seven doubling cards">
+    <div v-for="profile in profiles" class="purple card blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <div v-on:click="showdetails(profile.index)" class="ui inverted button">查看</div>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <img v-bind:src="'images/' + profile.img">
+      </div>
+      <div class="content">
+        <div class="header">{{ profile.name }}</div>
+        <div class="meta">{{ profile.areas.toString() }}</div>
+        <div class="description">
+          {{ profile.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="details" class="ui modal">
+  <h1 class="ui header">简介</h1>
+
+  <div class="ui row grid">
+    <div class="ui row centered image circular">
+      <img v-bind:src="'images/' + profile.img">
+    </div>
+    <h1 class="ui row centered">{{ profile.name }}</h1>
+  </div>
+  <div class="ui container" style="padding:5vh">
+
+    <div class="ui horizontal divider"><h5 class="ui grey header">关于我</h5></div>
+    <h2 class="ui header centered">{{ profile.description }}</h2>
+
+    <div class="ui horizontal divider"><h5 class="ui grey header">专业</h5></div>
+    <div class="ui big blue labels">
+      <div v-for="area in profile.areas" class="ui label">{{ area }}</div>
+    </div>
+
+
+    <div class="ui horizontal divider"><h5 class="ui grey header">更多</h5></div>
+    <div class="ui segment" style="border:none;box-shadow:none" v-html="profile.deeper"></div>
+
+
+    <div class="ui horizontal divider"><h5 class="ui grey header">联络</h5></div>
+    <table class="ui very basic collapsing celled table">
+      <tbody>
+        <tr v-for="contact in profile.contacts">
+          <td>
+           {{ contact.msg[0] }}
+          </td>
+          <td>
+            <a v-if="contact.link" v-bind:href="contact.msg[1]">{{ contact.msg[1] }}</a>
+            <p v-if="!contact.link">{{ contact.msg[1] }}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="actions">
+    <div class="ui positive button">
+      OK
+    </div>
+  </div>
+</div>
+<p id="footer" class="ui label huge footertext">@ 国成 设计&编写</p>
+<script src="include/jquery-3.2.1.min.js"></script>
+<script src="include/vue.min.js"></script>
+<script src="include/semantic.min.js"></script>
+<script src="scripts/aboutus.js"></script>
+</body>
+

@@ -48,7 +48,10 @@
   margin-top: 10vh;
 }
 
-.divider {
+.extremedivider {
   padding-top: 20vh;
   padding-bottom: 10vh;
+}
+.divider {
+  padding-top:10vh;
 }
